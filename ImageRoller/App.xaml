@@ -1,0 +1,15 @@
+﻿<Application x:Class="ImageRoller.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/BoinWPF;component/Themes/Dark.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="flavorC">#ADD8E6</Color>
+            <SolidColorBrush x:Key="flavor" Color="{StaticResource flavorC}"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

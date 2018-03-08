@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="ImageRoller.PastDirectory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             MaxWidth="500"
+             Name="uc">
+    <UserControl.Resources>
+        
+    </UserControl.Resources>
+
+    <Border BorderThickness="4" CornerRadius="2" MouseLeftButtonDown="border_Click">
+        <Border.Style>
+            <Style>
+                <Setter Property="Border.Background" Value="{StaticResource foreColorLight}"/>
+                <Setter Property="Border.BorderBrush" Value="{StaticResource foreColorLight}"/>
+                <Style.Triggers>
+                    <Trigger Property="Border.IsMouseOver" Value="True">
+                        <Setter Property="Border.BorderBrush" Value="{StaticResource flavor}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+        <DockPanel Margin="-1" Background="{StaticResource foreColorLight}">
+            <Button DockPanel.Dock="Right" Style="{StaticResource ButtonStyle}"
+                    Margin="10,0,0,0" Padding="10" Click="x_Click">
+                ✖
+            </Button>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Margin" Value="10,0,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock Name="dirLabel" 
+                        Foreground="{StaticResource backColorLight}"
+                        VerticalAlignment="Center" FontWeight="SemiBold">
+                    Pictures
+                </TextBlock>
+                <TextBlock Name="pathLabel"
+                           Foreground="{StaticResource foreColorDark}"
+                           VerticalAlignment="Center">
+                    C:/Users/Me/Pictures
+                </TextBlock>
+            </StackPanel>
+        </DockPanel>
+    </Border>
+</UserControl>
